@@ -1,0 +1,101 @@
+@import "~sass-font-face/_font-face.scss";
+
+@include font-face(
+  "gilroy-regular",
+  "fonts/gilroy-regular/",
+  "gilroy-regular",
+  "gilroy-regular"
+);
+
+@include font-face(
+  "gilroy-bold",
+  "fonts/gilroy-bold/",
+  "gilroy-bold",
+  "gilroy-bold"
+);
+
+@include font-face(
+  "gilroy-extrabold",
+  "fonts/gilroy-extrabold/",
+  "gilroy-extrabold",
+  "gilroy-extrabold"
+);
+
+@include font-face("gobold", "fonts/gobold/", "gobold", "gobold");
+
+@include font-face("goku", "fonts/goku/", "goku", "goku");
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: "gilroy-regular";
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.red {
+  background-color: #f50b00;
+}
+
+.purple {
+  background-color: #0e0d2f;
+}
+
+.red-gradient {
+  background: #e1026b;
+  background: -moz-linear-gradient(left, #e1026b 0%, #f70b18 59%, #fe2f01 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #e1026b 0%,
+    #f70b18 59%,
+    #fe2f01 100%
+  );
+  background: linear-gradient(to right, #e1026b 0%, #f70b18 59%, #fe2f01 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1026b', endColorstr='#fe2f01',GradientType=1 );
+}
+
+.purple-gradient {
+  background: #000000;
+  background: -moz-linear-gradient(
+    -45deg,
+    #000000 0%,
+    #0e0d2f 20%,
+    #0e0d2f 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #000000 0%,
+    #0e0d2f 20%,
+    #0e0d2f 100%
+  );
+  background: linear-gradient(135deg, #000000 0%, #0e0d2f 20%, #0e0d2f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0e0d2f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+// .App {
+//   height: 100vh;
+//   width: 100vw;
+// }

@@ -1,0 +1,101 @@
+$red: #f50b00;
+$purple: #0e0d2f;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 4%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  @media screen and (min-width: 1024px) {
+    padding: 2% 3%;
+  }
+  .wrapper-logo {
+    z-index: 1;
+    width: 50px;
+    @media screen and (min-width: 1024px) {
+      width: 75px;
+    }
+    .svg-logo {
+      stroke-width: 4px;
+      stroke: #fff;
+      fill: none;
+    }
+  }
+  .toggle-container {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    @media screen and (min-width: 1024px) {
+      top: 8%;
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 30px;
+      height: 2px;
+      background-color: $red;
+      margin: 5px 0;
+      transition: 0.5s;
+      @media screen and (min-width: 1024px) {
+        margin: 9px 0;
+        width: 42px;
+      }
+    }
+    &.open {
+      .bar1 {
+        transform: rotate(-45deg) translate(-6px, 5px);
+        -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+        transform: rotate(-45deg) translate(-6px, 5px);
+        @media screen and (min-width: 1024px) {
+          transform: rotate(-45deg) translate(-10px, 10px);
+          -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+        }
+      }
+      .bar3 {
+        transform: rotate(45deg) translate(-4px, -5px);
+        -webkit-transform: rotate(45deg) translate(-4px, -5px);
+        transform: rotate(45deg) translate(-4px, -5px);
+      }
+      .bar2 {
+        opacity: 0;
+      }
+    }
+  }
+  .menu {
+    background: $purple;
+    color: #fff;
+    font-family: "gobold";
+    width: 100%;
+    // height: 100vh;
+    transition: 1s ease;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      list-style-type: none;
+      padding: 0;
+      li {
+        font-size: 2em;
+        padding: 1em 0;
+        @media screen and (min-width: 1024px) {
+          font-size: 3em;
+        }
+      }
+    }
+  }
+}
