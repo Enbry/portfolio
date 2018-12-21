@@ -1,0 +1,41 @@
+  <svg viewBox="0 0 500 80">
+    <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0">
+	  <stop offset="0%" style="stop-color:#33235b;"/>
+      <stop offset="15%" style="stop-color:#792042;"/>
+	  <stop offset="30%" style="stop-color:#e1026b;"/>
+      <stop offset="45%" style="stop-color:#f70b18;"/>
+      <stop offset="60%" style="stop-color:#fe2f01;"/>
+	  <stop offset="75%" style="stop-color:#e1026b;"/>
+      <stop offset="90%" style="stop-color:#792042;"/>
+	  <stop offset="100%" style="stop-color:#33235b;"/>
+    </linearGradient>
+    <pattern 
+             id="p-img" 
+             viewBox="0 0 300 100"
+             patternUnits="userSpaceOnUse"
+             width="200%" height="200%"
+             x="-60%" y="-10%">
+      <rect x="0" y="0" width="150%" height="100%" fill="url(#gradient)">
+        <animate attributeType="XML"
+                 attributeName="x"
+                 from="0" to="150%"
+                 dur="7s"
+                 repeatCount="indefinite"/>
+      </rect>
+      <rect x="-150%" y="0" width="150%" height="100%" fill="url(#gradient)">
+        <animate attributeType="XML"
+                 attributeName="x"
+                 from="-150%" to="0"
+                 dur="7s"
+                 repeatCount="indefinite"/>
+      </rect>
+    </pattern>
+    </defs>
+    <text text-anchor="middle"
+          x="50%"
+          y="50%"
+          dy=".35em"
+          class="img-layer">
+      Brocheray
+    </text>

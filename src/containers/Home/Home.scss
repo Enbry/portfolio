@@ -1,0 +1,102 @@
+.home {
+  //   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //   background: #000000;
+  //   background: -moz-linear-gradient(
+  //     -45deg,
+  //     #000000 0%,
+  //     #0e0d2f 20%,
+  //     #0e0d2f 100%
+  //   );
+  //   background: -webkit-linear-gradient(
+  //     -45deg,
+  //     #000000 0%,
+  //     #0e0d2f 20%,
+  //     #0e0d2f 100%
+  //   );
+  //   background: linear-gradient(135deg, #000000 0%, #0e0d2f 20%, #0e0d2f 100%);
+  //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0e0d2f',GradientType=1 );
+  .title {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-family: "goku";
+      color: #fff;
+      // font-size: 3em;
+      @media screen and (min-width: 1024px) {
+        // font-size: 6em;
+      }
+      span {
+        display: flex;
+        align-items: flex-end;
+      }
+      svg {
+        height: 3em;
+        // stroke: #fff;
+        // position: relative;
+        text {
+          font-size: 3em;
+          // position: absolute;
+          // top: 50%;
+          // font-size: 2em;
+          // transform: translateY(-50%);
+        }
+        path {
+          //   fill: url(#red-gradient);
+        }
+        @media screen and (min-width: 1024px) {
+          height: 6em;
+        }
+      }
+    }
+    h2 {
+      font-family: "gobold";
+      color: #fff;
+      align-self: flex-end;
+    }
+  }
+}
+
+@keyframes explosion {
+  @for $i from 1 through 10 {
+    $number: $i * 10;
+    $percent: $number + "%";
+    #{$percent} {
+      content: $i + "";
+      color: white;
+      font-size: $i * 20px;
+    }
+  }
+}
+
+.bomb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:after {
+    font-size: 300px;
+    content: "BOOM!";
+    display: block;
+    color: red;
+    text-align: center;
+    animation: explosion 7s linear infinite reverse;
+    transition: color 0.1s ease;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "fira-sans-2", Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  font-weight: bold;
+}
